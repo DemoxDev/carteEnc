@@ -1,0 +1,13 @@
+{
+    "Welcome to our website" : "Bienvenue sur notre site",
+    "Dashboard" : "Tableau de bord",
+    "Manage Account" : "Gestion de compte",
+    "Profile" : "Profil",
+    "Log Out" : "Déconnecter",
+    "API Tokens" : "Jetons API",
+    "Manage Team" : "Gérer l'équipe",
+    "Team Settings" : "Paramètres d'équipe",
+    "Create New Team" : "Créer une nouvelle équipe",
+    "Switch Teams" : "Changer d'équipe",
+    "Save" : "Enregistrer"
+}
