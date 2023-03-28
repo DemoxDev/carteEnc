@@ -15,6 +15,9 @@
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-white sm:p-6">
                             <div class="grid grid-cols-6 gap-6">
+                                @if ($errors->any())
+                                    <x-validation-errors class="mb-4" />
+                                @endif
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="nomEtudiantFormulaire">Nom étudiant:</label><br>
                                     <input type="text" class="form-control" name="nomEtudiantFormulaire">
@@ -52,6 +55,8 @@
                                         <option value="sisr">SIO SISR</option>
                                     </select>
                                 </div>
+
+                                
 
                                 
                             </div>

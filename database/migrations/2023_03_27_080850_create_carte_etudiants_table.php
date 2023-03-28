@@ -15,11 +15,16 @@ return new class extends Migration
             $table->id();
             $table->string('nomEtudiant');
             $table->string('prenomEtudiant');
-            $table->string('email')->unique();
+            //$table->string('email')->unique();
+            $table->string('email') ;
             $table->integer('numero');
             $table->string('nomcv');
             $table->date('date_entree');
             $table->string('section');
+            $table->unsignedBigInteger('idUser');
+            //$table->foreign('idUser')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('idUser')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

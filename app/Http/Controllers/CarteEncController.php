@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\CarteEtudiant;
 
 class CarteEncController extends Controller
@@ -12,7 +13,8 @@ class CarteEncController extends Controller
      */
     public function index()
     {
-        $cartesEtudiant = CarteEtudiant::all();
+        // $cartesEtudiant = CarteEtudiant::all();
+        $cartesEtudiant = CarteEtudiant::where('idUser', auth()->user()->id)->get();
         return view('pages.index', compact('cartesEtudiant'));
     }
 
@@ -49,6 +51,14 @@ class CarteEncController extends Controller
             $path = $file->storeAs('public/uploads', $filename);
         }
         //enregistrement dans la BDD
+        $carteEtudiant->idUser = Auth::id();
+        
+        // if ($request->get('email') == Auth::user()->email )
+        if (CarteEtudiant::where('email', $request->get('email'))->exists()) {
+            // post with the same slug already exists
+            return redirect()->back()->withErrors(['email' => 'L\'email est déjà utilisé.']);
+         }
+
         $carteEtudiant->save();
         //redirection vers dashboard
         return redirect('dashboard');
