@@ -10,19 +10,20 @@ Configurer le .env.example (copie, renomme à .env et ensuite configurer la BDD,
 Télécharge et installe nvm, installe la dernière version de node.
 
 Dans la console :
-    <pre><code>composer clearcache</pre></code>
-    <pre><code>composer selfupdate</pre></code>
-    <pre><code>composer install</pre></code>
-    <pre><code>composer update composer-runtime-api</pre></code>
-    <pre><code>composer require lavavel/jetstream</pre></code>
-    <pre><code>php artisan jetstream:install livewire</pre></code>
-    <pre><code>npm install</pre></code>
-    <pre><code>php artisan key:generate</pre></code>
-    <pre><code>composer update</pre></code>
-    <pre><code>php artisan vendor:publish --tag=jetstream-views</pre></code>
-    <pre><code>php artisan migrate</pre></code>
-    <pre><code>php artisan migrate:refresh</pre></code>
-    
+```powershell
+    composer clearcache
+    composer selfupdate
+    composer install
+    composer update composer-runtime-api
+    composer require lavavel/jetstream
+    php artisan jetstream:install livewire
+    npm install
+    php artisan key:generate
+    composer update
+    php artisan vendor:publish --tag=jetstream-views
+    php artisan migrate
+    php artisan migrate:refresh
+```
 
 ## Usage
 
