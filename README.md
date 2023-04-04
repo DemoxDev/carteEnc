@@ -16,15 +16,10 @@ Dans la console :
     composer clearcache
     composer selfupdate
     composer install
-    composer update composer-runtime-api
-    composer require lavavel/jetstream
-    php artisan jetstream:install livewire
     npm install
-    php artisan key:generate
-    composer update
-    php artisan vendor:publish --tag=jetstream-views
     php artisan migrate
-    php artisan migrate:refresh
+    php artisan key:generate
+    npm run dev
 ```
 
 ## Usage
