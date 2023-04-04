@@ -108,6 +108,14 @@
                                 {{ __('Afficher les cartes de l\'utilisateur') }}
                             </x-dropdown-link>
 
+                            <x-dropdown-link href="{{ route('adresses.create') }}">
+                                {{ __('Ajouter une adresse') }}
+                            </x-dropdown-link>
+
+                            <x-dropdown-link href="{{ route('adresses.index-adresse') }}">
+                                {{ __('Afficher les adresses de l\'étudiant') }}
+                            </x-dropdown-link>
+
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
                                     {{ __('API Tokens') }}

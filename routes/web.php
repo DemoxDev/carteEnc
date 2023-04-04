@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdresseController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +30,6 @@ Route::middleware([
 });
 
 Route::resource('demandeCarte','App\Http\Controllers\CarteEncController');
+Route::resource('adresses','App\Http\Controllers\AdresseController');
+Route::get('/adresses', [AdresseController::class, 'index'])->name('adresses.index-adresse');
+
