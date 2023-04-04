@@ -6,10 +6,10 @@ CarteENC est un projet PHP Laravel qui utilise également le framework Symphony 
 
 Git clone le projet  
 Créer la BDD nommée carteEnc (Laragon->carteEnc)
-Configurer le .env.example (copie, renomme à .env et ensuite configurer la BDD, route, etc.)
-Télécharge et installe nvm, installe la dernière version de node.
-Télécharge et installe Composer.
-Télécharge et install la dernière version 
+Configurer le .env.example (copie, renomme à .env et ensuite configurer la BDD, route, etc.)  
+Télécharge et installe nvm, installe la dernière version de node.  
+Télécharge et installe Composer.  
+Télécharge et install la dernière version de PHP.  
 
 Dans la console :
 ```powershell
