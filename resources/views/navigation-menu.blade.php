@@ -108,6 +108,14 @@
                                 {{ __('Afficher les cartes de l\'utilisateur') }}
                             </x-dropdown-link>
 
+                            <x-dropdown-link href="{{ route('stages.create') }}">
+                                {{ __('Ajouter un stage') }}
+                            </x-dropdown-link>
+
+                            <x-dropdown-link href="{{ route('stages.index-stage') }}">
+                                {{ __('Afficher les stages de l\'étudiant') }}
+                            </x-dropdown-link>
+
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
                                     {{ __('API Tokens') }}

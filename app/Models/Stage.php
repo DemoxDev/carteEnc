@@ -6,16 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class CarteEtudiant extends Model
+class Stage extends Model
 {
     use HasFactory;
 
+    protected $table="etudiants_stages";
+
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'idUser', 'id');
+        return $this->belongsTo(User::class, 'id_Etudiant', 'id');
     }
-
-    protected $attributes = [
-        'nomCV' => 'default.pdf',
-    ];
 }

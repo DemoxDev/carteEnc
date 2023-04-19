@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,5 @@ Route::middleware([
 });
 
 Route::resource('demandeCarte','App\Http\Controllers\CarteEncController');
+Route::resource('stages','App\Http\Controllers\StageController');
+Route::get('/stages', [StageController::class, 'index'])->name('stages.index-stage');
